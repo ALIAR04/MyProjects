@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoseMenu">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="399.0" layoutY="89.0" prefHeight="422.0" prefWidth="302.0" spacing="7.0">
+         <children>
+            <Label text="Game Over">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font></Label>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <Label fx:id="lastWave" text="Label">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <Label fx:id="kills" text="Label">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <Label fx:id="accuracy" text="Label">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="back to Main Menu" />
+         </children></VBox>
+    </children>
+</AnchorPane>

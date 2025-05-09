@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StartMenu">
+   <children>
+      <VBox alignment="CENTER" layoutX="399.0" layoutY="89.0" prefHeight="422.0" prefWidth="302.0" spacing="7.0">
+         <children>
+            <Label text="Welcome">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font></Label>
+            <VBox prefHeight="62.0" prefWidth="302.0" spacing="1.0">
+               <children>
+                  <Label text="Username:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" prefHeight="38.0" prefWidth="247.0" promptText="Enter your Username" />
+               </children>
+            </VBox>
+            <VBox prefHeight="10.0" prefWidth="302.0" spacing="1.0">
+               <children>
+                  <Label text="Password:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="password" promptText="Enter your Password" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="302.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#guestClicked" text="Guest" />
+                  <Button mnemonicParsing="false" onMouseClicked="#loginClicked" text="Login" />
+               </children>
+            </HBox>
+            <Hyperlink onMouseClicked="#goToRegisterMenu" text="Sign up" textFill="#81dbef">
+               <font>
+                  <Font size="14.0" />
+               </font></Hyperlink>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

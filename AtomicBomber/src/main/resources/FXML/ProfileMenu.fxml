@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProfileMenu">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="399.0" layoutY="89.0" prefHeight="422.0" prefWidth="302.0" spacing="7.0">
+         <children>
+            <Label text="Profile Menu">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="50.0" prefWidth="302.0" spacing="1.0">
+               <children>
+                  <Label text="new Username:" />
+                  <TextField fx:id="newUsername" promptText="Enter your new Username" />
+               </children></VBox>
+            <VBox prefHeight="34.0" prefWidth="302.0">
+               <children>
+                  <Label text="new Password:" />
+                  <TextField fx:id="newPassword" promptText="Enter your new Password" />
+               </children></VBox>
+            <Button mnemonicParsing="false" onMouseClicked="#changeInformation" text="Change" />
+            <Button mnemonicParsing="false" onMouseClicked="#backToMainMenuClicked" text="Back to Main menu" />
+            <Button mnemonicParsing="false" onMouseClicked="#avatarClicked" text="Avatar Menu" />
+            <Button mnemonicParsing="false" onMouseClicked="#leaveAccount" text="Leave Account">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#deleteAccount" text="Delete Account">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children></VBox>
+    </children>
+</AnchorPane>

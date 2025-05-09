@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build with Raylib",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "src/main.c",
+          "-fno-tree-vectorize",
+          "-O0", "-o",
+          "main.exe",
+          "-I", "include",
+          "-L", "lib",
+          "-lraylib",
+          "-lgdi32",
+          "-lwinmm",
+          "-lopengl32"
+          
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  

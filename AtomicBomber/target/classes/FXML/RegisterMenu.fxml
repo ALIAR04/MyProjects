@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterMenu">
+    <children>
+        <VBox alignment="CENTER" layoutX="399.0" layoutY="89.0" prefHeight="422.0" prefWidth="302.0" spacing="7.0">
+         <children>
+            <Label text="Sign Up" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font></Label>
+            <VBox prefHeight="0.0" prefWidth="302.0" spacing="1.0">
+               <children>
+                  <Label text="username:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" promptText="Enter your Username" />
+               </children></VBox>
+            <VBox prefHeight="34.0" prefWidth="302.0" spacing="1.0">
+               <children>
+                  <Label text="password:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="password" promptText="Enter your Password" />
+               </children></VBox>
+            <Button mnemonicParsing="false" onMouseClicked="#signUpClicked" text="Sign up" />
+         </children></VBox>
+    </children>
+
+</AnchorPane>
