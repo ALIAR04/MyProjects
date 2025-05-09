@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "thewitcher";
+    src: url(../fonts/Thewitcher-jnOj.ttf);
+}
+
+BorderPane {
+    -fx-background-image: url(../images/login-background.jpg);
+    -fx-background-size: cover;
+}
+
+Label {
+    -fx-font-family: "thewitcher";
+}
+
+.combo-box {
+    -fx-font-size: 28px;
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-background-radius: 10px;
+}
+
+.combo-box:hover, .combo-box:focused {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.list-view {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-background-radius: 10px;
+    -fx-font-size: 22px;
+}
+
+.combo-box .arrow {
+    -fx-background-color: orange;
+}
+    
+.combo-box .list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(255, 215, 97, 0.8);
+    -fx-border-style: dotted;
+    -fx-border-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-family: "thewitcher";
+    -fx-padding: 10px;
+    -fx-border-insets: 3px;
+    -fx-background-insets: 3px;
+    -fx-cursor: hand;
+}
+
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+    
+.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-font-family: "thewitcher";
+}
+
+TextField {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    /* -fx-font-family: "thewitcher"; */
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+}
+
+TextField:focused, TextField:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-font-size: 28px;
+}
+
+Button {
+    -fx-background-color: transparent;
+    -fx-font-family: "thewitcher";
+    -fx-font-size: 40px;
+    -fx-text-fill: #ffa371;
+}
+
+Button:focused {
+    -fx-text-fill: #ff803c;
+}

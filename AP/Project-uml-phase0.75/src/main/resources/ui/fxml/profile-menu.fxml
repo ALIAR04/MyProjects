@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1360.0" styleClass="rootPane" stylesheets="@../styles/profile-menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProfileMenu">
+   <bottom>
+      <Label fx:id="backButton" onMouseClicked="#gotoMainMenu" prefWidth="268.0" styleClass="backButton" text="back to main menu" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="accountTab" alignment="CENTER" onMouseClicked="#selectTab" prefHeight="80.0" prefWidth="453.3" styleClass="tab">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="274.0" text="Account settings" textFill="WHITE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="statsTab" alignment="CENTER" onMouseClicked="#selectTab" prefHeight="80.0" prefWidth="453.3" styleClass="tab">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="user profile" textFill="WHITE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="historyTab" alignment="CENTER" onMouseClicked="#selectTab" prefHeight="80.0" prefWidth="453.3" styleClass="tab">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="206.0" text="Game history" textFill="WHITE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="tabContent" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane fx:id="accountTabContent" prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="310.0" text="change username" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="newUsernameField">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="60.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="updateUsernameButton" onMouseClicked="#updateUsername" styleClass="updateButton" text="update" textFill="#e7ff92">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="usernameResultField" textFill="#ff7373">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="310.0" text="change nickname" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="newNicknameField">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="60.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="updateNicknameButton" onMouseClicked="#updateNickname" styleClass="updateButton" text="update" textFill="#e7ff92">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="nicknameResultField" textFill="#ff7373">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="310.0" text="change email" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="newEmailField">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="60.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="updateEmailButton" onMouseClicked="#updateEmail" styleClass="updateButton" text="update" textFill="#e7ff92">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="emailResultField" textFill="#ff7373">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="310.0" text="change password" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <StackPane>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <children>
+                                          <TextField fx:id="newPasswordShownField" visible="false">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <PasswordField fx:id="newPasswordHiddenField">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </PasswordField>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fx:id="hideNewPassword" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#hideNewPassword" pickOnBounds="true" preserveRatio="true" visible="false">
+                                             <image>
+                                                <Image url="@../icons/hide-password.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <effect>
+                                                <DropShadow blurType="ONE_PASS_BOX" />
+                                             </effect>
+                                          </ImageView>
+                                          <ImageView fx:id="showNewPassword" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#showNewPassword" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/show-password.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <effect>
+                                                <DropShadow blurType="ONE_PASS_BOX" />
+                                             </effect>
+                                          </ImageView>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </StackPane>
+                                    <Label fx:id="updatePasswordButton" onMouseClicked="#updatePassword" styleClass="updateButton" text="update" textFill="#e7ff92">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="passwordResultField" textFill="#ff7373">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox fx:id="oldPasswordBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="310.0" text="old password" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <StackPane>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <children>
+                                          <TextField fx:id="oldPasswordShownField" visible="false">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <PasswordField fx:id="oldPasswordHiddenField">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </PasswordField>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fx:id="hideOldPassword" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#hideOldPassword" pickOnBounds="true" preserveRatio="true" visible="false">
+                                             <image>
+                                                <Image url="@../icons/hide-password.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <effect>
+                                                <DropShadow blurType="ONE_PASS_BOX" />
+                                             </effect>
+                                          </ImageView>
+                                          <ImageView fx:id="showOldPassword" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#showOldPassword" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/show-password.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <effect>
+                                                <DropShadow blurType="ONE_PASS_BOX" />
+                                             </effect>
+                                          </ImageView>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </StackPane>
+                                    <Label fx:id="oldPasswordConfirmButton" onMouseClicked="#confirmOldPassword" styleClass="updateButton" text="confirm" textFill="#e7ff92">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="logoutButton" onMouseClicked="#logout" styleClass="logoutButton" text="logout from account" textFill="#ffaf5f">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="statsTabContent" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="900.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="BASELINE_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="username" styleClass="userInfo" text="username" textFill="#ff7032">
+                                       <font>
+                                          <Font size="100.0" />
+                                       </font>
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="nickname" styleClass="userInfo" text="(nickname)" textFill="#d7b785">
+                                       <font>
+                                          <Font size="64.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.7" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label prefWidth="285.0" styleClass="userInfo" text="max score:" textFill="#d7b785">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="maxScore" styleClass="userInfo" text="N/A" textFill="WHITE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="216.0">
+                                 <children>
+                                    <Label prefWidth="285.0" styleClass="userInfo" text="rank:" textFill="#d7b785">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="rank" styleClass="userInfo" text="N/A" textFill="WHITE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="277.0">
+                                 <children>
+                                    <Label prefWidth="285.0" styleClass="userInfo" text="number of matches:" textFill="#d7b785">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="matchCount" styleClass="userInfo" text="N/A" textFill="WHITE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="338.0">
+                                 <children>
+                                    <Label prefWidth="285.0" styleClass="userInfo" text="number of wins:" textFill="#d7b785">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="winCount" styleClass="userInfo" text="N/A" textFill="WHITE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="399.0">
+                                 <children>
+                                    <Label prefWidth="285.0" styleClass="userInfo" text="number of draws:" textFill="#d7b785">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="drawCount" styleClass="userInfo" text="N/A" textFill="WHITE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="460.0">
+                                 <children>
+                                    <Label prefWidth="285.0" styleClass="userInfo" text="number of defeats:" textFill="#d7b785">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="loseCount" styleClass="userInfo" text="N/A" textFill="WHITE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.5" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <VBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Label fx:id="searchUserErrorField" textFill="#ff7373">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="390.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Label text="search user" textFill="#e7ff92">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </Label>
+                                          <TextField fx:id="searchField">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="searchButton" onMouseClicked="#searchUser" styleClass="updateButton" text="search" textFill="#e7ff92">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="30.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="60.0" top="30.0" />
+                           </padding>
+                        </VBox>
+                     </center></BorderPane>
+                  <BorderPane fx:id="historyTabContent" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <right>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="7.0">
+                                 <children>
+                                    <Label text="show history up to" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                    <TextField fx:id="recordCountField" prefWidth="60.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="28.0" layoutY="44.0" text="records" textFill="#e7ff92">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label onMouseClicked="#getRecords" styleClass="updateButton" text="ok" textFill="#e7ff92">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="40.0" />
+                           </padding>
+                        </VBox>
+                     </right>
+                     <left>
+                        <StackPane BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="noMatchErrorLabel" text="user hasn't completed any matches yet" textFill="#86836c">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane hbarPolicy="NEVER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="850.0">
+                                 <content>
+                                    <VBox fx:id="recordContainer" nodeOrientation="LEFT_TO_RIGHT" prefWidth="816.0" spacing="10.0">
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </StackPane>
+                     </left>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding></BorderPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

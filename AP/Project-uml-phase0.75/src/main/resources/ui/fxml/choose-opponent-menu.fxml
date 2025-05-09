@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1360.0" stylesheets="@../styles/choose-opponent-menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ChooseOpponentMenu">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="enter your opponent's username:" textFill="#e7ff92">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="opponentField">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label fx:id="startButton" onMouseClicked="#startGame" styleClass="buttonLabel" text="start game" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="errorField" textFill="#ff739b">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

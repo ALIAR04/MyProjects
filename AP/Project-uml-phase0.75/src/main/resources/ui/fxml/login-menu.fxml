@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1360.0" stylesheets="@../styles/login-menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginMenu">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="GWENT" textFill="#d95e00">
+               <font>
+                  <Font size="64.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="70.0" />
+               </VBox.margin>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="185.0" text="username" textFill="#ffd297">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <TextField fx:id="usernameField" prefWidth="200.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="usernameErrorLabel" textFill="#ff5e5e">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="185.0" styleClass="formLabel" text="password" textFill="#ffd297">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="shownPasswordField" visible="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="hiddenPasswordField">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </StackPane>
+                  <StackPane>
+                     <children>
+                        <ImageView fx:id="hidePasswordButton" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="25.0" onMouseClicked="#hidePassword" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../icons/hide-password.png" />
+                           </image>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="showPasswordButton" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#showPassword" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/show-password.png" />
+                           </image>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <Label fx:id="passwordErrorLabel" textFill="#ff5e5e">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" text="stay signed in" textFill="#ffd297">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <Button fx:id="enterButton" mnemonicParsing="false" onAction="#login" styleClass="enterButton" text="Enter" textFill="#ffa371">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="forgotPasswordButton" mnemonicParsing="false" onAction="#gotoForgetPasswordMenu" styleClass="forgetPassword" text="Forgot your password?" textFill="#fff892" underline="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="dontHaveAccountButton" mnemonicParsing="false" onAction="#gotoRegisterMenu" styleClass="dontHaveAccount" text="Don't have an account?" textFill="#fff892" underline="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="60.0" top="110.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>

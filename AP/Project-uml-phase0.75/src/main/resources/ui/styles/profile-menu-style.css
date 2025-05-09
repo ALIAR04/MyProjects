@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "thewitcher";
+    src: url(../fonts/Thewitcher-jnOj.ttf);
+}
+
+@font-face {
+    font-family: "Vinque Rg";
+    src: url(../fonts/vinque.rg-regular.otf);
+}
+
+.rootPane {
+    -fx-background-image: url(../images/main-menu-background.jpg);
+    -fx-background-size: cover;
+}
+
+Label {
+    -fx-font-family: "thewitcher";
+}
+
+.backButton, .logoutButton {
+    -fx-text-fill: #e7ff92;
+    -fx-font-size: 30px;
+}
+
+.backButton:hover, .logoutButton:hover {
+    -fx-text-fill: #ffd334;
+    -fx-font-size: 30px;
+}
+
+.tab {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tab Label {
+    -fx-font-size: 30px;
+    -fx-text-fill: #e7ff92;
+}
+
+.tab:hover, #selected {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tab:hover Label, #selected Label {
+    -fx-font-size: 30px;
+    -fx-text-fill: #ffd334;
+}
+
+.tabContent {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.updateButton {
+    -fx-font-family: "thewitcher";
+    -fx-font-size: 24px;
+    -fx-text-fill: #e7ff92;
+}
+
+.updateButton:hover {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffd334;
+}
+
+TextField, PasswordField {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+    -fx-border-width: 0.5px;
+    -fx-border-color: white;
+    -fx-border-style: dotted;
+    -fx-border-radius: 15px;
+}
+
+TextField:focused, PasswordField:focused {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.userInfo {
+    -fx-font-family: "Vinque Rg";
+}
+
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0, 0, 0;
+}
+
+.scroll-pane:focused {
+    -fx-font-size: 30px;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-font-size: 25px;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(231, 255, 146, 0.3);
+    -fx-background-radius: 10px;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button:hover,
+.scroll-pane .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button:hover .increment-arrow,
+.scroll-pane .scroll-bar:vertical .decrement-button:hover .decrement-arrow {
+    -fx-background-color: #ffd334;
+}
+
+
+.record {
+    -fx-border-width: 1px;
+    -fx-border-style: dotted;
+    -fx-border-color: white;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+.record:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+.record * {
+    -fx-font-family: "Vinque Rg";
+}
+
+.recordUsername {
+    -fx-font-size: 40px;
+}
+
+#winner {
+    -fx-text-fill: #ffd700;
+}
+
+#winnerFinalScore {
+    -fx-text-fill: #998200;
+}
+
+#loser {
+    -fx-text-fill: #666666;
+}
+
+#loserFinalScore {
+    -fx-text-fill: #666666;
+}
+
+#draw {
+    -fx-text-fill: #b3b3b3;
+}
+
+#drawFinalScore {
+    -fx-text-fill: #cfcfcf;
+}
+
+.recordFinalScore {
+    -fx-font-size: 28px;
+}
+
+.playerRounds {
+    -fx-font-size: 25px;
+    -fx-text-fill: #dec88e;
+}
+
+.roundScores {
+    -fx-font-size: 20px;
+    -fx-text-fill: #dec88e;
+}
+
+.matchDate {
+    -fx-font-size: 20px;
+    -fx-text-fill: #828282;
+}

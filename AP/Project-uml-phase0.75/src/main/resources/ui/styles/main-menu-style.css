@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "thewitcher";
+    src: url(../fonts/Thewitcher-jnOj.ttf);
+}
+
+BorderPane {
+    -fx-background-image: url(../images/main-menu-background.jpg);
+    -fx-background-size: cover;
+}
+
+Label {
+    -fx-font-family: "thewitcher";
+}
+
+.buttonLabel {
+    -fx-font-family: "thewitcher";
+    -fx-font-size: 40px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #e7ff92;
+}
+
+.buttonLabel:hover {
+    -fx-text-fill: #ffd334;
+}

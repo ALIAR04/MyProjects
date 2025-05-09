@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Vinque Rg";
+    src: url(../fonts/vinque.rg-regular.otf);
+}
+
+AnchorPane {
+    -fx-background-image: url(../images/board.jpg);
+    -fx-background-size: cover;
+}
+
+.hand:hover{
+    -fx-background-color: linear-gradient(to top, rgba(189, 132, 0, 0.25), transparent);
+    -fx-cursor: hand;
+}
+
+.cardRow:hover {
+    -fx-background-color: linear-gradient(to top, rgba(133, 87, 0, 0.35), transparent);
+    -fx-cursor: hand;
+}
+
+.grave:hover, .deck:hover {
+    -fx-background-color: rgba(79, 60, 0, 0.25);
+    -fx-cursor: hand;
+}
+
+.commander:hover {
+    -fx-background-color: rgba(70, 47, 0, 0.3);
+    -fx-cursor: hand;
+}
+
+.weather:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-cursor: hand;
+}
+
+.playerInfoBox {
+    /* -fx-background-image: url(../images/monsters-transparent.png); */
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.opponentInfoBox {
+    /* -fx-background-image: url(../images/skellige-transparent.png); */
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#monsters-background {
+    -fx-background-image: url(../images/monsters-transparent.png);
+}
+#empire-nilfgaardian-background {
+    -fx-background-image: url(../images/empire-nilfgaardian-transparent.png);
+}
+#northern-realms-background {
+    -fx-background-image: url(../images/northern-realms-transparent.png);
+}
+#scoiatael-background {
+    -fx-background-image: url(../images/scoiatael-transparent.png);
+}
+#skellige-background {
+    -fx-background-image: url(../images/skellige-transparent.png);
+}
+
+.playerInfo {
+    -fx-font-family: "Vinque Rg";
+}
+
+/* northern realms color: #8ea2ff
+monsters color: #ff765e
+nilfgaardian color: #eba000
+scoiatael color: #80f700
+skellige color: #e75eff */
+
+.card {
+    -fx-stroke-width: 0px;
+    -fx-arc-width: 10px;
+    -fx-arc-height: 10px;
+    -fx-opacity: 0.7;
+}
+
+.card:hover {
+    -fx-stroke-width: 0px;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+.cardShowBox {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nextCard {
+    -fx-font-size: 80px;
+    -fx-text-fill: white;
+}
+
+.nextCard:hover {
+    -fx-text-fill: #e7ff92;
+}
+
+.confirmButton {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.confirmButton:hover {
+    -fx-text-fill: #e7ff92;
+}
+
+.bigCard {
+    -fx-stroke-width: 0px;
+    -fx-arc-width: 30px;
+    -fx-arc-height: 30px;
+}

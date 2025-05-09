@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "thewitcher";
+    src: url(../fonts/Thewitcher-jnOj.ttf);
+}
+
+BorderPane {
+    -fx-background-image: url(../images/main-menu-background.jpg);
+    -fx-background-size: cover;
+}
+
+Label {
+    -fx-font-family: "thewitcher";
+}
+
+.tab {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tab .factionName {
+    -fx-font-size: 25px;
+    -fx-text-fill: #e7ff92;
+}
+
+.monstersTab:hover .factionName, .monstersTab#selected .factionName {
+    -fx-text-fill: #ff4545;
+}
+
+.nilfgaardianTab:hover .factionName, .nilfgaardianTab#selected .factionName {
+    -fx-text-fill: #ffb011;
+}
+
+.realmsTab:hover .factionName, .realmsTab#selected .factionName {
+    -fx-text-fill: #40a6ff;
+}
+
+.scoiataelTab:hover .factionName, .scoiataelTab#selected .factionName {
+    -fx-text-fill: #40ac2d;
+}
+
+.skelligeTab:hover .factionName, .skelligeTab#selected .factionName {
+    -fx-text-fill: #b74bff;
+}
+
+.tab:hover, #selected {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tab:hover .factionName, #selected .factionName {
+    -fx-font-size: 25px;
+}
+
+.cardContainer {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0, 0, 0;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-font-size: 25px;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(231, 255, 146, 0.3);
+    -fx-background-radius: 10px;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button:hover,
+.scroll-pane .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button:hover .increment-arrow,
+.scroll-pane .scroll-bar:vertical .decrement-button:hover .decrement-arrow {
+    -fx-background-color: #ffd334;
+}
+
+.card {
+    -fx-stroke-width: 0;
+    -fx-arc-width: 20px;
+    -fx-arc-height: 20px;
+    -fx-opacity: 0.7;
+}
+
+.card:hover {
+    -fx-stroke-width: 0;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+
+.infoContainer {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.buttonLabel {
+    -fx-text-fill: #e7ff92;
+}
+
+.buttonLabel:hover {
+    -fx-text-fill: #ffd334;
+}
+
+.chooseLeaderButton, .confirmButton {
+    -fx-font-size: 30px;
+}
+
+.saveLoadDeck {
+    -fx-font-size: 25px;
+}
+
+
+.leaderCard {
+    -fx-stroke-width: 0;
+    -fx-arc-width: 25px;
+    -fx-arc-height: 25px;
+    -fx-opacity: 0.8;
+}
+
+.leaderCard:hover {
+    -fx-stroke-width: 0;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+#selectedLeader {
+    -fx-stroke-width: 3px;
+    -fx-stroke: #e7ff92;
+    -fx-opacity: 1;
+}
+
+.bigCard {
+    -fx-stroke-width: 0;
+    -fx-arc-width: 30px;
+    -fx-arc-height: 30px;
+}
+
+.backButton {
+    -fx-font-size: 30px;
+}
+
+.cardAndCountContainer Label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #e7ff92;
+}
+
+.disabledCard {
+    -fx-opacity: 0.3;
+    -fx-cursor: default;
+}
+
+.disabledCard:hover {
+    -fx-opacity: 0.3;
+    -fx-cursor: default;
+}

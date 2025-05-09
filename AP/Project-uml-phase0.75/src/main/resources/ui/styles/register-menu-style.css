@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "thewitcher";
+    src: url(../fonts/Thewitcher-jnOj.ttf);
+}
+
+BorderPane {
+    -fx-background-image: url(../images/login-background.jpg);
+    -fx-background-size: cover;
+}
+
+Label, Button {
+    -fx-font-family: "thewitcher";
+}
+
+TextField, PasswordField {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+}
+
+TextField:focused, PasswordField:focused {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.registerButton {
+    -fx-background-color: transparent;
+    -fx-font-size: 40px;
+    -fx-text-fill: #ffa371;
+}
+
+.registerButton:focused {
+    -fx-text-fill: #ff803c;
+}
+
+.haveAccount {
+    -fx-background-color: transparent;
+    -fx-font-size: 24px;
+    -fx-text-fill: #fff892;
+}
+
+.haveAccount:focused {
+    -fx-text-fill: #fff344
+}
+
+.generateRandomPassword {
+    -fx-background-color: transparent;
+}

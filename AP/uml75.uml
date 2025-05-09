@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/ASUS/Desktop/Project-uml-phase0.75</OriginalElement>
+  <nodes>
+    <node x="4629.0" y="5321.0">model.ImpenetrableFog</node>
+    <node x="1961.3511904761908" y="2905.0">model.MusterAbility</node>
+    <node x="3846.0875000000005" y="1221.0">model.BitingFrost</node>
+    <node x="984.3511904761908" y="2905.0">model.BerserkerAbility</node>
+    <node x="1571.8511904761908" y="2178.0">controller.ChangeHandMenuController</node>
+    <node x="1121.0" y="5321.0">view.ForgetPasswordMenu</node>
+    <node x="4236.087500000001" y="1221.0">model.ClearWeather</node>
+    <node x="1947.3511904761908" y="1452.0">model.Player</node>
+    <node x="4443.087500000001" y="1221.0">model.Mardroeme</node>
+    <node x="809.3511904761908" y="2905.0">model.SpyAbility</node>
+    <node x="1500.1113095238097" y="3390.0">model.User</node>
+    <node x="785.0" y="5321.0">controller.ProfileController</node>
+    <node x="1406.3511904761908" y="2802.0">model.SecurityQuestions</node>
+    <node x="1726.5000000000002" y="890.5">model.Faction</node>
+    <node x="1551.0" y="5321.0">view.ProfileMenu</node>
+    <node x="1933.8511904761908" y="2222.5">view.ChangeHandMenu</node>
+    <node x="5390.587500000001" y="921.0">model.CommanderCard</node>
+    <node x="1981.0" y="5321.0">view.RegisterMenu</node>
+    <node x="2411.0" y="5321.0">view.LoginMenu</node>
+    <node x="1209.3511904761908" y="2905.0">model.MedicAbility</node>
+    <node x="4635.087500000001" y="1221.0">model.TorrentialRain</node>
+    <node x="4846.087500000001" y="1221.0">model.DecoyCard</node>
+    <node x="4088.0" y="5321.0">controller.RegisterController</node>
+    <node x="2841.0" y="5321.0">view.MainMenu</node>
+    <node x="4028.0875000000005" y="1221.0">model.SkelligeStorm</node>
+    <node x="1727.3511904761908" y="2905.0">model.TightBondAbility</node>
+    <node x="2165.351190476191" y="2905.0">model.HornAbility</node>
+    <node x="2603.4625000000005" y="2108.0">model.Round</node>
+    <node x="110.35119047619082" y="2905.0">model.TransformerAbility</node>
+    <node x="361.3511904761908" y="2905.0">model.ScorchAbility</node>
+    <node x="0.0" y="5321.0">view.PreGameMenu</node>
+    <node x="3155.4625000000005" y="2550.0">controller.GameController</node>
+    <node x="5031.087500000001" y="1221.0">model.ScorchCard</node>
+    <node x="4273.726190476191" y="921.0">model.SpecialCard</node>
+    <node x="951.8511904761908" y="2206.0">model.Ability</node>
+    <node x="3701.0" y="5321.0">controller.ForgetPasswordController</node>
+    <node x="564.3511904761908" y="2905.0">model.MoralBoostAbility</node>
+    <node x="1673.3750000000002" y="1132.0">model.Deck</node>
+    <node x="2576.851190476191" y="0.0">model.Row</node>
+    <node x="2392.4625000000005" y="2676.0">model.GameResult</node>
+    <node x="430.0" y="5321.0">controller.Validation</node>
+    <node x="3271.0" y="5321.0">view.GameMenu</node>
+    <node x="5441.587500000001" y="1221.0">controller.SiegMaster</node>
+    <node x="1678.1113095238097" y="4890.0">controller.PreGameController</node>
+    <node x="1311.1113095238097" y="5018.5">controller.LoginController</node>
+    <node x="3444.476190476191" y="410.0">model.Card</node>
+    <node x="3672.0875000000005" y="1221.0">model.HornCard</node>
+    <node x="4385.0" y="5321.0">Main</node>
+    <node x="4596.476190476191" y="832.0">model.UnitCard</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.Player" target="model.Card" relationship="DEPENDENCY">
+      <point x="-74.25" y="-291.0" />
+      <point x="2021.6011904761908" y="1430.0" />
+      <point x="27.976190476190823" y="1430.0" />
+      <point x="27.976190476190823" y="810.0" />
+      <point x="1694.9761904761908" y="810.0" />
+      <point x="1694.9761904761908" y="790.0" />
+      <point x="3499.976190476191" y="790.0" />
+      <point x="-111.0" y="179.0" />
+    </edge>
+    <edge source="model.User" target="model.Deck" relationship="TO_MANY">
+      <point x="100.25" y="-725.0" />
+      <point x="1800.8613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3349.0" />
+      <point x="3588.9625000000005" y="3349.0" />
+      <point x="3588.9625000000005" y="1400.0" />
+      <point x="1915.6250000000002" y="1400.0" />
+      <point x="80.75" y="123.0" />
+    </edge>
+    <edge source="model.Deck" target="model.Faction" relationship="TO_ONE">
+      <point x="80.75" y="-123.0" />
+      <point x="1915.6250000000002" y="1110.0" />
+      <point x="1883.0000000000002" y="1110.0" />
+      <point x="1883.0000000000002" y="1100.0" />
+      <point x="1953.7500000000002" y="1100.0" />
+      <point x="75.75" y="64.5" />
+    </edge>
+    <edge source="model.DecoyCard" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="4928.587500000001" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.Ability" target="model.Player" relationship="DEPENDENCY">
+      <point x="0.0" y="-81.0" />
+      <point x="1086.8511904761908" y="2076.0" />
+      <point x="1771.6011904761908" y="2076.0" />
+      <point x="1771.6011904761908" y="2056.0" />
+      <point x="2021.6011904761908" y="2056.0" />
+      <point x="-74.25" y="291.0" />
+    </edge>
+    <edge source="model.User" target="model.Deck" relationship="DEPENDENCY">
+      <point x="-100.25" y="-725.0" />
+      <point x="1600.3613095238097" y="3369.0" />
+      <point x="708.2363095238097" y="3369.0" />
+      <point x="708.2363095238097" y="3359.0" />
+      <point x="78.85119047619082" y="3359.0" />
+      <point x="78.85119047619082" y="1400.0" />
+      <point x="1754.1250000000002" y="1400.0" />
+      <point x="-80.75" y="123.0" />
+    </edge>
+    <edge source="model.Card" target="model.Row" relationship="DEPENDENCY">
+      <point x="-83.25" y="-179.0" />
+      <point x="3527.726190476191" y="389.0" />
+      <point x="1845.2261904761908" y="389.0" />
+      <point x="1845.2261904761908" y="379.0" />
+      <point x="2641.851190476191" y="379.0" />
+      <point x="-65.0" y="179.0" />
+    </edge>
+    <edge source="model.Row" target="model.Card" relationship="DEPENDENCY">
+      <point x="-65.0" y="179.0" />
+      <point x="2641.851190476191" y="379.0" />
+      <point x="1845.2261904761908" y="379.0" />
+      <point x="1845.2261904761908" y="389.0" />
+      <point x="3527.726190476191" y="389.0" />
+      <point x="-83.25" y="-179.0" />
+    </edge>
+    <edge source="model.ScorchCard" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="5115.587500000001" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="controller.PreGameController" target="model.User" relationship="TO_ONE">
+      <point x="79.5" y="-193.0" />
+      <point x="1916.6113095238097" y="4870.0" />
+      <point x="1800.8613095238097" y="4870.0" />
+      <point x="100.25" y="725.0" />
+    </edge>
+    <edge source="model.SpecialCard" target="model.Card" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="4389.226190476191" y="810.0" />
+      <point x="4766.976190476191" y="810.0" />
+      <point x="4766.976190476191" y="800.0" />
+      <point x="3721.976190476191" y="800.0" />
+      <point x="111.0" y="179.0" />
+    </edge>
+    <edge source="model.Row" target="model.Card" relationship="TO_MANY">
+      <point x="65.0" y="179.0" />
+      <point x="2771.851190476191" y="379.0" />
+      <point x="4472.601190476191" y="379.0" />
+      <point x="4472.601190476191" y="389.0" />
+      <point x="3694.226190476191" y="389.0" />
+      <point x="83.25" y="-179.0" />
+    </edge>
+    <edge source="model.Card" target="model.Row" relationship="TO_MANY">
+      <point x="83.25" y="-179.0" />
+      <point x="3694.226190476191" y="389.0" />
+      <point x="4472.601190476191" y="389.0" />
+      <point x="4472.601190476191" y="379.0" />
+      <point x="2771.851190476191" y="379.0" />
+      <point x="65.0" y="179.0" />
+    </edge>
+    <edge source="controller.ChangeHandMenuController" target="model.Player" relationship="TO_ONE">
+      <point x="85.5" y="-109.0" />
+      <point x="1828.3511904761908" y="2066.0" />
+      <point x="3099.6815476190477" y="2066.0" />
+      <point x="3099.6815476190477" y="2056.0" />
+      <point x="2170.101190476191" y="2056.0" />
+      <point x="74.25" y="291.0" />
+    </edge>
+    <edge source="model.TorrentialRain" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="4730.587500000001" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.Player" target="model.Deck" relationship="DEPENDENCY">
+      <point x="-74.25" y="-291.0" />
+      <point x="2021.6011904761908" y="1430.0" />
+      <point x="27.976190476190823" y="1430.0" />
+      <point x="27.976190476190823" y="1420.0" />
+      <point x="78.85119047619082" y="1420.0" />
+      <point x="78.85119047619082" y="1400.0" />
+      <point x="1754.1250000000002" y="1400.0" />
+      <point x="-80.75" y="123.0" />
+    </edge>
+    <edge source="model.TransformerAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="225.85119047619082" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="controller.GameController" target="model.Player" relationship="DEPENDENCY">
+      <point x="-105.75" y="-389.0" />
+      <point x="3261.2125000000005" y="2528.0" />
+      <point x="2981.2125000000005" y="2528.0" />
+      <point x="2981.2125000000005" y="2076.0" />
+      <point x="1771.6011904761908" y="2076.0" />
+      <point x="1771.6011904761908" y="2056.0" />
+      <point x="2021.6011904761908" y="2056.0" />
+      <point x="-74.25" y="291.0" />
+    </edge>
+    <edge source="model.GameResult" target="model.User" relationship="TO_ONE">
+      <point x="185.5" y="263.0" />
+      <point x="2948.9625000000005" y="3349.0" />
+      <point x="2934.3613095238097" y="3349.0" />
+      <point x="2934.3613095238097" y="3369.0" />
+      <point x="1800.8613095238097" y="3369.0" />
+      <point x="100.25" y="-725.0" />
+    </edge>
+    <edge source="controller.ChangeHandMenuController" target="model.Player" relationship="DEPENDENCY">
+      <point x="-85.5" y="-109.0" />
+      <point x="1657.3511904761908" y="2086.0" />
+      <point x="89.35119047619082" y="2086.0" />
+      <point x="89.35119047619082" y="2066.0" />
+      <point x="1771.6011904761908" y="2066.0" />
+      <point x="1771.6011904761908" y="2056.0" />
+      <point x="2021.6011904761908" y="2056.0" />
+      <point x="-74.25" y="291.0" />
+    </edge>
+    <edge source="model.User" target="model.SecurityQuestions" relationship="TO_ONE">
+      <point x="100.25" y="-725.0" />
+      <point x="1800.8613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3349.0" />
+      <point x="1632.1011904761908" y="3349.0" />
+      <point x="75.25" y="137.0" />
+    </edge>
+    <edge source="model.GameResult" target="model.Round" relationship="DEPENDENCY">
+      <point x="-185.5" y="-263.0" />
+      <point x="2577.9625000000005" y="2528.0" />
+      <point x="2758.4625000000005" y="2528.0" />
+      <point x="2758.4625000000005" y="2498.0" />
+      <point x="2683.4625000000005" y="2498.0" />
+      <point x="-80.0" y="179.0" />
+    </edge>
+    <edge source="controller.GameController" target="model.Round" relationship="DEPENDENCY">
+      <point x="-105.75" y="-389.0" />
+      <point x="3261.2125000000005" y="2528.0" />
+      <point x="2981.2125000000005" y="2528.0" />
+      <point x="2981.2125000000005" y="2508.0" />
+      <point x="2758.4625000000005" y="2508.0" />
+      <point x="2758.4625000000005" y="2498.0" />
+      <point x="2683.4625000000005" y="2498.0" />
+      <point x="-80.0" y="179.0" />
+    </edge>
+    <edge source="model.User" target="model.GameResult" relationship="TO_MANY">
+      <point x="100.25" y="-725.0" />
+      <point x="1800.8613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3349.0" />
+      <point x="2948.9625000000005" y="3349.0" />
+      <point x="185.5" y="263.0" />
+    </edge>
+    <edge source="model.MoralBoostAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="676.8511904761908" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.Round" target="model.Player" relationship="TO_ONE">
+      <point x="80.0" y="-179.0" />
+      <point x="2843.4625000000005" y="2066.0" />
+      <point x="3099.6815476190477" y="2066.0" />
+      <point x="3099.6815476190477" y="2056.0" />
+      <point x="2170.101190476191" y="2056.0" />
+      <point x="74.25" y="291.0" />
+    </edge>
+    <edge source="model.Faction" target="model.Card" relationship="TO_MANY">
+      <point x="75.75" y="-64.5" />
+      <point x="1953.7500000000002" y="800.0" />
+      <point x="3656.3375000000005" y="800.0" />
+      <point x="3656.3375000000005" y="790.0" />
+      <point x="3610.976190476191" y="790.0" />
+      <point x="0.0" y="179.0" />
+    </edge>
+    <edge source="view.ChangeHandMenu" target="model.Player" relationship="DEPENDENCY">
+      <point x="0.0" y="-64.5" />
+      <point x="2126.351190476191" y="2076.0" />
+      <point x="1771.6011904761908" y="2076.0" />
+      <point x="1771.6011904761908" y="2056.0" />
+      <point x="2021.6011904761908" y="2056.0" />
+      <point x="-74.25" y="291.0" />
+    </edge>
+    <edge source="model.Player" target="model.Row" relationship="TO_MANY">
+      <point x="74.25" y="-291.0" />
+      <point x="2170.101190476191" y="1430.0" />
+      <point x="3651.0875000000005" y="1430.0" />
+      <point x="3651.0875000000005" y="1420.0" />
+      <point x="5669.087500000001" y="1420.0" />
+      <point x="5669.087500000001" y="389.0" />
+      <point x="4472.601190476191" y="389.0" />
+      <point x="4472.601190476191" y="379.0" />
+      <point x="2771.851190476191" y="379.0" />
+      <point x="65.0" y="179.0" />
+    </edge>
+    <edge source="model.Deck" target="model.Card" relationship="DEPENDENCY">
+      <point x="-80.75" y="-123.0" />
+      <point x="1754.1250000000002" y="1110.0" />
+      <point x="1829.8750000000002" y="1110.0" />
+      <point x="1829.8750000000002" y="1100.0" />
+      <point x="1716.0000000000002" y="1100.0" />
+      <point x="1716.0000000000002" y="810.0" />
+      <point x="1694.9761904761908" y="810.0" />
+      <point x="1694.9761904761908" y="790.0" />
+      <point x="3499.976190476191" y="790.0" />
+      <point x="-111.0" y="179.0" />
+    </edge>
+    <edge source="model.TightBondAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="1834.3511904761908" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.Player" target="model.Card" relationship="TO_MANY">
+      <point x="74.25" y="-291.0" />
+      <point x="2170.101190476191" y="1430.0" />
+      <point x="3651.0875000000005" y="1430.0" />
+      <point x="3651.0875000000005" y="800.0" />
+      <point x="3656.3375000000005" y="800.0" />
+      <point x="3656.3375000000005" y="790.0" />
+      <point x="3610.976190476191" y="790.0" />
+      <point x="0.0" y="179.0" />
+    </edge>
+    <edge source="controller.GameController" target="model.Card" relationship="DEPENDENCY">
+      <point x="-105.75" y="-389.0" />
+      <point x="3261.2125000000005" y="2528.0" />
+      <point x="2981.2125000000005" y="2528.0" />
+      <point x="2981.2125000000005" y="2518.0" />
+      <point x="3640.0875000000005" y="2518.0" />
+      <point x="3640.0875000000005" y="810.0" />
+      <point x="1694.9761904761908" y="810.0" />
+      <point x="1694.9761904761908" y="790.0" />
+      <point x="3499.976190476191" y="790.0" />
+      <point x="-111.0" y="179.0" />
+    </edge>
+    <edge source="controller.PreGameController" target="model.User" relationship="DEPENDENCY">
+      <point x="-79.5" y="-193.0" />
+      <point x="1757.6113095238097" y="4870.0" />
+      <point x="1695.6113095238097" y="4870.0" />
+      <point x="1695.6113095238097" y="4860.0" />
+      <point x="1600.3613095238097" y="4860.0" />
+      <point x="-100.25" y="725.0" />
+    </edge>
+    <edge source="model.User" target="model.Deck" relationship="TO_ONE">
+      <point x="100.25" y="-725.0" />
+      <point x="1800.8613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3369.0" />
+      <point x="2934.3613095238097" y="3349.0" />
+      <point x="3588.9625000000005" y="3349.0" />
+      <point x="3588.9625000000005" y="1400.0" />
+      <point x="1915.6250000000002" y="1400.0" />
+      <point x="80.75" y="123.0" />
+    </edge>
+    <edge source="controller.GameController" target="model.Card" relationship="TO_MANY">
+      <point x="105.75" y="-389.0" />
+      <point x="3472.7125000000005" y="2528.0" />
+      <point x="3661.5875000000005" y="2528.0" />
+      <point x="3661.5875000000005" y="800.0" />
+      <point x="3656.3375000000005" y="800.0" />
+      <point x="3656.3375000000005" y="790.0" />
+      <point x="3610.976190476191" y="790.0" />
+      <point x="0.0" y="179.0" />
+    </edge>
+    <edge source="controller.ChangeHandMenuController" target="model.Deck" relationship="DEPENDENCY">
+      <point x="-85.5" y="-109.0" />
+      <point x="1657.3511904761908" y="2086.0" />
+      <point x="89.35119047619082" y="2086.0" />
+      <point x="89.35119047619082" y="1410.0" />
+      <point x="78.85119047619082" y="1410.0" />
+      <point x="78.85119047619082" y="1400.0" />
+      <point x="1754.1250000000002" y="1400.0" />
+      <point x="-80.75" y="123.0" />
+    </edge>
+    <edge source="model.Player" target="model.Row" relationship="DEPENDENCY">
+      <point x="-74.25" y="-291.0" />
+      <point x="2021.6011904761908" y="1430.0" />
+      <point x="27.976190476190823" y="1430.0" />
+      <point x="27.976190476190823" y="1410.0" />
+      <point x="0.0" y="1410.0" />
+      <point x="0.0" y="389.0" />
+      <point x="1845.2261904761908" y="389.0" />
+      <point x="1845.2261904761908" y="379.0" />
+      <point x="2641.851190476191" y="379.0" />
+      <point x="-65.0" y="179.0" />
+    </edge>
+    <edge source="model.UnitCard" target="model.Card" relationship="GENERALIZATION">
+      <point x="0.0" y="-123.0" />
+      <point x="4766.976190476191" y="800.0" />
+      <point x="3721.976190476191" y="800.0" />
+      <point x="111.0" y="179.0" />
+    </edge>
+    <edge source="model.ClearWeather" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="4329.587500000001" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.Player" target="model.User" relationship="DEPENDENCY">
+      <point x="-74.25" y="291.0" />
+      <point x="2021.6011904761908" y="2056.0" />
+      <point x="1771.6011904761908" y="2056.0" />
+      <point x="1771.6011904761908" y="2076.0" />
+      <point x="99.85119047619082" y="2076.0" />
+      <point x="99.85119047619082" y="3359.0" />
+      <point x="708.2363095238097" y="3359.0" />
+      <point x="708.2363095238097" y="3369.0" />
+      <point x="1600.3613095238097" y="3369.0" />
+      <point x="-100.25" y="-725.0" />
+    </edge>
+    <edge source="model.Deck" target="model.Faction" relationship="DEPENDENCY">
+      <point x="-80.75" y="-123.0" />
+      <point x="1754.1250000000002" y="1110.0" />
+      <point x="1829.8750000000002" y="1110.0" />
+      <point x="1829.8750000000002" y="1100.0" />
+      <point x="1802.2500000000002" y="1100.0" />
+      <point x="-75.75" y="64.5" />
+    </edge>
+    <edge source="model.User" target="model.SecurityQuestions" relationship="DEPENDENCY">
+      <point x="-100.25" y="-725.0" />
+      <point x="1600.3613095238097" y="3369.0" />
+      <point x="708.2363095238097" y="3369.0" />
+      <point x="708.2363095238097" y="3359.0" />
+      <point x="1481.6011904761908" y="3359.0" />
+      <point x="-75.25" y="137.0" />
+    </edge>
+    <edge source="model.HornCard" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="3749.0875000000005" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="controller.LoginController" target="model.User" relationship="DEPENDENCY">
+      <point x="0.0" y="-64.5" />
+      <point x="1484.6113095238097" y="4870.0" />
+      <point x="1695.6113095238097" y="4870.0" />
+      <point x="1695.6113095238097" y="4860.0" />
+      <point x="1600.3613095238097" y="4860.0" />
+      <point x="-100.25" y="725.0" />
+    </edge>
+    <edge source="controller.GameController" target="model.Player" relationship="TO_ONE">
+      <point x="105.75" y="-389.0" />
+      <point x="3472.7125000000005" y="2066.0" />
+      <point x="3099.6815476190477" y="2066.0" />
+      <point x="3099.6815476190477" y="2056.0" />
+      <point x="2170.101190476191" y="2056.0" />
+      <point x="74.25" y="291.0" />
+    </edge>
+    <edge source="model.Player" target="model.Deck" relationship="TO_ONE">
+      <point x="74.25" y="-291.0" />
+      <point x="2170.101190476191" y="1430.0" />
+      <point x="3651.0875000000005" y="1430.0" />
+      <point x="3651.0875000000005" y="1410.0" />
+      <point x="3588.9625000000005" y="1410.0" />
+      <point x="3588.9625000000005" y="1400.0" />
+      <point x="1915.6250000000002" y="1400.0" />
+      <point x="80.75" y="123.0" />
+    </edge>
+    <edge source="model.Round" target="model.Player" relationship="DEPENDENCY">
+      <point x="-80.0" y="-179.0" />
+      <point x="2683.4625000000005" y="2076.0" />
+      <point x="1771.6011904761908" y="2076.0" />
+      <point x="1771.6011904761908" y="2056.0" />
+      <point x="2021.6011904761908" y="2056.0" />
+      <point x="-74.25" y="291.0" />
+    </edge>
+    <edge source="controller.ChangeHandMenuController" target="model.Card" relationship="DEPENDENCY">
+      <point x="-85.5" y="-109.0" />
+      <point x="1657.3511904761908" y="2086.0" />
+      <point x="89.35119047619082" y="2086.0" />
+      <point x="89.35119047619082" y="2056.0" />
+      <point x="17.476190476190823" y="2056.0" />
+      <point x="17.476190476190823" y="810.0" />
+      <point x="1694.9761904761908" y="810.0" />
+      <point x="1694.9761904761908" y="790.0" />
+      <point x="3499.976190476191" y="790.0" />
+      <point x="-111.0" y="179.0" />
+    </edge>
+    <edge source="model.BerserkerAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.CommanderCard" target="model.Card" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="5524.587500000001" y="810.0" />
+      <point x="4766.976190476191" y="810.0" />
+      <point x="4766.976190476191" y="800.0" />
+      <point x="3721.976190476191" y="800.0" />
+      <point x="111.0" y="179.0" />
+    </edge>
+    <edge source="model.MedicAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="1297.8511904761908" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.MusterAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="2053.351190476191" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.Player" target="model.User" relationship="TO_ONE">
+      <point x="74.25" y="291.0" />
+      <point x="2170.101190476191" y="2056.0" />
+      <point x="3099.6815476190477" y="2056.0" />
+      <point x="3099.6815476190477" y="2066.0" />
+      <point x="3144.9625000000005" y="2066.0" />
+      <point x="3144.9625000000005" y="3349.0" />
+      <point x="2934.3613095238097" y="3349.0" />
+      <point x="2934.3613095238097" y="3369.0" />
+      <point x="1800.8613095238097" y="3369.0" />
+      <point x="100.25" y="-725.0" />
+    </edge>
+    <edge source="model.GameResult" target="model.Round" relationship="TO_MANY">
+      <point x="185.5" y="-263.0" />
+      <point x="2948.9625000000005" y="2528.0" />
+      <point x="2768.4625000000005" y="2528.0" />
+      <point x="2768.4625000000005" y="2488.0" />
+      <point x="2843.4625000000005" y="2488.0" />
+      <point x="80.0" y="179.0" />
+    </edge>
+    <edge source="model.User" target="model.GameResult" relationship="DEPENDENCY">
+      <point x="-100.25" y="-725.0" />
+      <point x="1600.3613095238097" y="3369.0" />
+      <point x="708.2363095238097" y="3369.0" />
+      <point x="708.2363095238097" y="3359.0" />
+      <point x="2577.9625000000005" y="3359.0" />
+      <point x="-185.5" y="263.0" />
+    </edge>
+    <edge source="model.GameResult" target="model.User" relationship="DEPENDENCY">
+      <point x="-185.5" y="263.0" />
+      <point x="2577.9625000000005" y="3359.0" />
+      <point x="708.2363095238097" y="3359.0" />
+      <point x="708.2363095238097" y="3369.0" />
+      <point x="1600.3613095238097" y="3369.0" />
+      <point x="-100.25" y="-725.0" />
+    </edge>
+    <edge source="model.Row" target="model.Card" relationship="TO_ONE">
+      <point x="65.0" y="179.0" />
+      <point x="2771.851190476191" y="379.0" />
+      <point x="4472.601190476191" y="379.0" />
+      <point x="4472.601190476191" y="389.0" />
+      <point x="3694.226190476191" y="389.0" />
+      <point x="83.25" y="-179.0" />
+    </edge>
+    <edge source="model.BitingFrost" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="3927.0875000000005" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.SkelligeStorm" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="4122.087500000001" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.Mardroeme" target="model.SpecialCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="4529.087500000001" y="1110.0" />
+      <point x="4389.226190476191" y="1110.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.HornAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="2248.851190476191" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.SpyAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="886.8511904761908" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="model.Faction" target="model.Card" relationship="DEPENDENCY">
+      <point x="-75.75" y="-64.5" />
+      <point x="1802.2500000000002" y="810.0" />
+      <point x="1694.9761904761908" y="810.0" />
+      <point x="1694.9761904761908" y="790.0" />
+      <point x="3499.976190476191" y="790.0" />
+      <point x="-111.0" y="179.0" />
+    </edge>
+    <edge source="controller.SiegMaster" target="model.CommanderCard" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="0.0" y="34.0" />
+    </edge>
+    <edge source="model.ScorchAbility" target="model.Ability" relationship="GENERALIZATION">
+      <point x="0.0" y="-34.0" />
+      <point x="452.8511904761908" y="2528.0" />
+      <point x="1086.8511904761908" y="2528.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="controller.GameController" target="model.Round" relationship="TO_MANY">
+      <point x="105.75" y="-389.0" />
+      <point x="3472.7125000000005" y="2498.0" />
+      <point x="2768.4625000000005" y="2498.0" />
+      <point x="2768.4625000000005" y="2488.0" />
+      <point x="2843.4625000000005" y="2488.0" />
+      <point x="80.0" y="179.0" />
+    </edge>
+    <edge source="model.Deck" target="model.Card" relationship="TO_MANY">
+      <point x="80.75" y="-123.0" />
+      <point x="1915.6250000000002" y="1110.0" />
+      <point x="1883.0000000000002" y="1110.0" />
+      <point x="1883.0000000000002" y="1100.0" />
+      <point x="3651.0875000000005" y="1100.0" />
+      <point x="3651.0875000000005" y="800.0" />
+      <point x="3656.3375000000005" y="800.0" />
+      <point x="3656.3375000000005" y="790.0" />
+      <point x="3610.976190476191" y="790.0" />
+      <point x="0.0" y="179.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.1" showDependencies="true" x="2726.3513513513517" y="2883.1081081081084" />
+  <SelectedNodes>
+    <node>view.PreGameMenu</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

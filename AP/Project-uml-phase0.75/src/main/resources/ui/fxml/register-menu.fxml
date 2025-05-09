@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1360.0" stylesheets="@../styles/register-menu-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterMenu">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="register menu" textFill="#d95e00">
+               <font>
+                  <Font size="64.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <VBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label prefWidth="185.0" text="username" textFill="#ffd297">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                        <TextField fx:id="usernameField">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label prefHeight="44.0" prefWidth="159.0" text="nickname" textFill="#ffd297">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="60.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="nicknameField">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label fx:id="usernameErrorLabel" textFill="#ff5e5e" wrapText="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="88.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label prefWidth="185.0" text="password" textFill="#ffd297">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                        <StackPane>
+                           <children>
+                              <TextField fx:id="shownPasswordField" visible="false">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="hiddenPasswordField">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="40.0">
+                           <children>
+                              <ImageView fx:id="hidePassword" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#hidePassword" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../icons/hide-password.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <ImageView fx:id="showPassword" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="20.0" onMouseClicked="#showPassword" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/show-password.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <Label fx:id="generatePassword" onMouseClicked="#generateRandomPassword" text="generate random password" textFill="#ffe9b8">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="47.0" prefHeight="60.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label prefWidth="185.0" text="confirm" textFill="#ffd297">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                        <StackPane>
+                           <children>
+                              <TextField fx:id="shownConfirmField" visible="false">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="hiddenConfirmField">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="40.0">
+                           <children>
+                              <ImageView fx:id="hideConfirm" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#hideConfirm" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../icons/hide-password.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <ImageView fx:id="showConfirm" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="20.0" onMouseClicked="#showConfirm" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/show-password.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <Label fx:id="passwordErrorLabel" textFill="#ff5e5e" wrapText="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="88.0" prefHeight="130.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label prefWidth="185.0" text="email" textFill="#ffd297">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                        <TextField fx:id="emailField">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label fx:id="emailErrorLabel" textFill="#ff5e5e" wrapText="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="registerButton" mnemonicParsing="false" onAction="#register" styleClass="registerButton" text="next step ⇒" textFill="#ffa371">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+               <children>
+                  <Button fx:id="haveAccountButton" mnemonicParsing="false" onAction="#gotoLoginMenu" styleClass="haveAccount" text="already have an account?" underline="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>

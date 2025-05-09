@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@../styles/game-board-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GameBoard">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1360.0">
+         <children>
+            <HBox fx:id="handBox" alignment="CENTER" layoutX="409.0" layoutY="597.0" onMouseClicked="#showCardsInsideBox" prefHeight="90.0" prefWidth="664.0" styleClass="hand" />
+            <HBox fx:id="playerCloseBox" alignment="CENTER" layoutX="500.0" layoutY="313.0" onMouseClicked="#showCardsInsideBox" prefHeight="80.0" prefWidth="578.0" styleClass="cardRow" />
+            <HBox fx:id="playerRangedBox" alignment="CENTER" layoutX="501.0" layoutY="406.0" onMouseClicked="#showCardsInsideBox" prefHeight="82.0" prefWidth="576.0" styleClass="cardRow" />
+            <HBox fx:id="playerSiegeBox" alignment="CENTER" layoutX="500.0" layoutY="502.0" onMouseClicked="#showCardsInsideBox" prefHeight="82.0" prefWidth="577.0" styleClass="cardRow" />
+            <HBox fx:id="opponentCloseBox" alignment="CENTER" layoutX="501.0" layoutY="200.0" onMouseClicked="#showCardsInsideBox" prefHeight="87.0" prefWidth="576.0" styleClass="cardRow" />
+            <HBox fx:id="opponentRangedBox" alignment="CENTER" layoutX="501.0" layoutY="108.0" onMouseClicked="#showCardsInsideBox" prefHeight="82.0" prefWidth="576.0" styleClass="cardRow" />
+            <HBox fx:id="opponentSiegeBox" alignment="CENTER" layoutX="501.0" layoutY="17.0" onMouseClicked="#showCardsInsideBox" prefHeight="80.0" prefWidth="576.0" styleClass="cardRow" />
+            <HBox fx:id="playerDeckBox" alignment="CENTER" layoutX="1222.0" layoutY="586.0" prefHeight="104.0" prefWidth="78.0">
+               <children>
+                  <Label fx:id="playerRemainingDeckCardsLabel" text="16 Cards in Deck" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+               </children></HBox>
+            <HBox fx:id="opponentDeckBox" alignment="CENTER" layoutX="1223.0" layoutY="49.0" prefHeight="104.0" prefWidth="79.0">
+               <children>
+                  <Label fx:id="opponentRemainingDeckCardsLabel" text="16 Cards in Deck" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+               </children></HBox>
+            <HBox fx:id="playerSiegeHornBox" alignment="CENTER" layoutX="402.0" layoutY="500.0" prefHeight="84.0" prefWidth="94.0" />
+            <HBox fx:id="playerRangedHornBox" alignment="CENTER" layoutX="402.0" layoutY="402.0" prefHeight="84.0" prefWidth="94.0" />
+            <HBox fx:id="playerCloseHornBox" alignment="CENTER" layoutX="403.0" layoutY="309.0" prefHeight="84.0" prefWidth="94.0" />
+            <HBox fx:id="opponentCloseHornBox" alignment="CENTER" layoutX="403.0" layoutY="203.0" prefHeight="84.0" prefWidth="94.0" />
+            <HBox fx:id="opponentRangedHornBox" alignment="CENTER" layoutX="403.0" layoutY="105.0" prefHeight="84.0" prefWidth="94.0" />
+            <HBox fx:id="opponentSiegeHornBox" alignment="CENTER" layoutX="402.0" layoutY="13.0" prefHeight="84.0" prefWidth="94.0" />
+            <HBox fx:id="playerCommanderBox" alignment="CENTER" layoutX="97.0" layoutY="588.0" prefHeight="100.0" prefWidth="74.0" styleClass="commander" />
+            <HBox fx:id="opponentCommanderBox" alignment="CENTER" layoutX="97.0" layoutY="55.0" prefHeight="98.0" prefWidth="74.0" styleClass="commander" />
+            <Label fx:id="playerTotalScoreLabel" alignment="CENTER" layoutX="301.0" layoutY="506.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="opponentTotalScoreLabel" alignment="CENTER" layoutX="300.0" layoutY="221.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="opponentSiegeScoreLabel" alignment="CENTER" layoutX="359.0" layoutY="38.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="opponentRangedScoreLabel" alignment="CENTER" layoutX="359.0" layoutY="131.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="opponentCloseScoreLabel" alignment="CENTER" layoutX="359.0" layoutY="229.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerCloseScoreLabel" alignment="CENTER" layoutX="360.0" layoutY="334.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerRangedScoreLabel" alignment="CENTER" layoutX="359.0" layoutY="428.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerSiegeScoreLabel" alignment="CENTER" layoutX="359.0" layoutY="527.0" prefHeight="23.0" prefWidth="41.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="opponentLife1" fitHeight="35.0" fitWidth="35.0" layoutX="246.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/full-life.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="opponentLife2" fitHeight="35.0" fitWidth="35.0" layoutX="246.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/full-life.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="opponentPassStatusLabel" alignment="CENTER" layoutX="232.0" layoutY="257.0" textFill="#e7ff92">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="11.0" radius="5.0" width="11.0">
+                           <color>
+                              <Color red="0.9058823585510254" green="1.0" blue="0.572549045085907" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <Label fx:id="playerPassStatusLabel" alignment="CENTER" layoutX="232.0" layoutY="455.0" textFill="#e7ff92">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow height="11.0" radius="5.0" width="11.0">
+                           <color>
+                              <Color red="0.9058823585510254" green="1.0" blue="0.572549045085907" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <ImageView fx:id="playerLife2" fitHeight="35.0" fitWidth="35.0" layoutX="245.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/full-life.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="playerLife1" fitHeight="35.0" fitWidth="35.0" layoutX="245.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/full-life.png" />
+               </image>
+            </ImageView>
+            <VBox fx:id="opponentInfoBox" alignment="CENTER" layoutX="27.0" layoutY="171.0" prefHeight="126.0" prefWidth="215.0" spacing="10.0" styleClass="opponentInfoBox">
+               <children>
+                  <Label fx:id="opponentUsernameLabel" styleClass="playerInfo" text="Opponent" textFill="#ffb70e">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label fx:id="opponentFactionLabel" styleClass="playerInfo" text="Skellige" textFill="#e75eff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="opponentCardsRemainingLabel" layoutX="49.0" layoutY="51.0" styleClass="playerInfo" text="5 cards in hand" textFill="#e75eff">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="playerInfoBox" alignment="CENTER" layoutX="26.0" layoutY="446.0" prefHeight="126.0" prefWidth="215.0" spacing="10.0" styleClass="playerInfoBox">
+               <children>
+                  <Label fx:id="playerUsernameLabel" styleClass="playerInfo" text="Player" textFill="#ffb70e">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label fx:id="playerFactionLabel" styleClass="playerInfo" text="Monsters" textFill="#ff765e">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="playerCardsRemainingLabel" layoutX="49.0" layoutY="51.0" styleClass="playerInfo" text="5 cards in hand" textFill="#ff765e">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="passRoundButton" layoutX="219.0" layoutY="626.0" styleClass="passButton" text="Pass round" textFill="#e7ff92">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.5" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <StackPane fx:id="opponentGraveBox" layoutX="1095.0" layoutY="50.0" onMouseClicked="#showCardsInsideBox" prefHeight="102.0" prefWidth="78.0" styleClass="grave" />
+            <StackPane fx:id="playerGraveBox" layoutX="1095.0" layoutY="587.0" onMouseClicked="#showCardsInsideBox" prefHeight="102.0" prefWidth="78.0" styleClass="grave" />
+            <StackPane fx:id="weatherCardBox" layoutX="98.0" layoutY="316.0" prefHeight="102.0" prefWidth="200.0" styleClass="weather" />
+         </children>
+      </AnchorPane>
+      <BorderPane fx:id="cardInfoPane" prefHeight="200.0" prefWidth="200.0" styleClass="cardShowBox" visible="false">
+         <right>
+            <Label fx:id="nextCard" onMouseClicked="#showNextCard" styleClass="nextCard" text="►" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="80.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </right>
+         <left>
+            <Label fx:id="previousCard" onMouseClicked="#showPreviousCard" styleClass="nextCard" text="◄" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </left>
+         <center>
+            <VBox fx:id="cardInfoBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="cardDescription" text="Card Description" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="confirmButton" styleClass="confirmButton" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</StackPane>
